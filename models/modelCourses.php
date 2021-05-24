@@ -22,7 +22,7 @@ function addCourse($courseCode, $courseTitle, $courseLangage){
 function getCourses(){
     //on se co a la base de données
     $bddPDO = connexionBDD();
-    $requete = "SELECT * FROM courses ORDER BY coursesId ASC";
+    $requete = "SELECT * FROM courses ORDER BY courseId ASC";
     $resultGetCourses = $bddPDO->query($requete);
     return $resultGetCourses;
 }

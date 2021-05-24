@@ -30,19 +30,19 @@
         <header class="site-header" data-bg-image="">
             <div class="container">
                 <div class="header-bar">
-                    <a href="index.html" class="branding">
+                    <a href="" class="branding">
                         <img src="assets/images/logo.png" alt="" class="logo">
                         <div class="logo-type">
-                            <h1 class="site-title">Company name</h1>
-                            <small class="site-description">Tagline goes here</small>
+                            <h1 class="site-title">Gestion de cours - Udemy</h1>
+                            <small class="site-description">PHP & MVC by Mitch</small>
                         </div>
                     </a>
 
                     <nav class="main-navigation">
                         <button class="menu-toggle"><i class="fa fa-bars"></i></button>
                         <ul class="menu">
-                            <li class="home menu-item"><a href="index.html"><img src="assets/images/home-icon.png" alt="Home"></a></li>
-                            <li class="menu-item"><a href="about.html">About</a></li>
+                            <li class="home menu-item"><a href=""><img src="assets/images/home-icon.png" alt="Home"></a></li>
+                            <li class="menu-item"><a href="controllerCourse/getAllCourses">Tous les cours</a></li>
                             <li class="menu-item"><a href="controllerCourse/addOneCourse">New Cours</a></li>
                             <li class="menu-item current-menu-item"><a href="projects.html">Our projects</a></li>
                             <li class="menu-item"><a href="contact.html">Contact</a></li>

@@ -1,6 +1,6 @@
 <!-- fichier de connection a la base de données -->
 <?php
-function connexionDBB(){
+function connexionBDD(){
 
     $db_host = "localhost";
     $db_name = "gestion_de_cours";
