@@ -54,5 +54,6 @@ if ($_GET['action']) {
 //Si aucune action existe
 else {
     //a redefinir
-    echo "Aucune action existe, vous devez me rediriger vers une page par defaut (page d'accueil)";
+    //echo "Aucune action existe, vous devez me rediriger vers une page par defaut (page d'accueil)";
+    require_once 'views/viewCourse.php';
 }
