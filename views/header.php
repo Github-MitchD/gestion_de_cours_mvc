@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
 
-    <head>
-        <!-- Permet de definir la racine du site -->
-        <base href="/gestion_de_cours_Udemy/">
+<head>
+    <!-- Permet de definir la racine du site -->
+    <base href="/gestion_de_cours_Udemy/">
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-        <title>Projects : Science Labs</title>
+    <title>Projects : Science Labs</title>
 
-        <!-- Loading third party fonts -->
-        <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-        <link href="assets/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Loading third party fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <link href="assets/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Loading main css file -->
-        <link rel="stylesheet" href="assets/style.css">
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="assets/style.css">
 
-        <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
 		<script src="assets/js/ie-support/html5.js"></script>
 		<script src="assets/js/ie-support/respond.js"></script>
 		<![endif]-->
 
-    </head>
+</head>
 
 <body>
     <div class="site-content">
@@ -44,8 +45,9 @@
                             <li class="home menu-item"><a href=""><img src="assets/images/home-icon.png" alt="Home"></a></li>
                             <li class="menu-item"><a href="controllerCourse/getAllCourses">Tous les cours</a></li>
                             <li class="menu-item"><a href="controllerCourse/addOneCourse">New Cours</a></li>
-                            <li class="menu-item current-menu-item"><a href="projects.html">Our projects</a></li>
-                            <li class="menu-item"><a href="contact.html">Contact</a></li>
+                            <li class="menu-item"><a href="#link">Our projects</a></li>
+                            <li class="menu-item"><a href="#link">Connection</a></li>
+                            <!-- <li class="menu-item current-menu-item"><a href="contact.html">current</a></li> -->
                         </ul>
                     </nav>
 

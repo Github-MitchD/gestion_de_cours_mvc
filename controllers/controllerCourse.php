@@ -47,3 +47,35 @@ function getAllCourses(){
     //on ferme la connexion du serveur pour permettre a d'autres requete de s'executer
     $resultGetCourses->closeCursor();
 }
+
+/**
+ * Fonction qui permet de modifier un cours grace a son id
+ * @param $courseId
+ */
+function getUpdateCourse($courseId)
+{
+    $data = getCourse($courseId);
+    if(!$data){
+        $message = "Aucun cours !";
+    } else {
+        require_once 'views/viewUpdateCourse.php';
+    }
+    if(isset($_POST['update'])){
+        if(!empty($_POST['courseCode']) && !empty($_POST['courseTitle']) && !empty($_POST['courseLangage'])){
+            //on fait appel a la fonction du modelCourse qui permet de mettre a jour le cours
+            $resultUpdate = updateCourse($courseId);
+
+            if(!$resultUpdate){
+                $message = "Un probleme est survenu, la mise à jour n'a pas été effectuée !";
+                header('Location: controllerCourse/getAllCourses');
+            }
+            else {
+                $message = "La mise a jour a bien été effectué !";
+            }
+        }
+        else {
+            $message = "Tous les champs sont requis !";
+        }
+        require_once 'views/errors.php';
+    }
+}

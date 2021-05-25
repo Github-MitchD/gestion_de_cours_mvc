@@ -9,15 +9,16 @@ if (isset($message)) echo $message;
 <h2>Liste de tous les cours</h2>
 <h3>Il y a <?= $nb_courses; ?> cours.</h3>
 
-<div class="dcontainer">
+<div class="container">
     <center>
-        <table class="table table-info table-hover table-striped table-bordered">
+        <table class="table table-hover table-striped table-bordered">
             <thead>
                 <tr>
                     <th scope="col">#id</th>
                     <th scope="col">Code du cours</th>
                     <th scope="col">Titre du cours</th>
                     <th scope="col">Langue du cours</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,6 +31,7 @@ if (isset($message)) echo $message;
                     echo "<td>$valeur[1]</td>";
                     echo "<td>$valeur[2]</td>";
                     echo "<td>$valeur[3]</td>";
+                    echo "<td><a href='controllerCourse/getUpdateCourse/$valeur[0]'>Modifier</a> | <a href='controllerCourse/getUpdateCourse/$valeur[0]'>Delete</a></td>";
                     echo "</tr>";
                 }
 
