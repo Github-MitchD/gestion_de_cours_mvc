@@ -19,6 +19,7 @@ function addCourse($courseCode, $courseTitle, $courseLangage){
     $requete->bindValue(':courseLangage', $courseLangage);
 
     $result = $requete->execute();
+
     return $result;
 }
 
@@ -30,7 +31,9 @@ function getCourses(){
     //on se co a la base de données
     $bddPDO = connexionBDD();
     $requete = "SELECT * FROM courses ORDER BY courseId ASC";
+
     $resultGetCourses = $bddPDO->query($requete);
+
     return $resultGetCourses;
 }
 
@@ -44,7 +47,9 @@ function getCourse($courseId){
     $bddPDO = connexionBDD();
     $requete = "SELECT * FROM courses WHERE courseId = $courseId";
     $result = $bddPDO->query($requete);
+    
     $data = $result->fetch(PDO::FETCH_ASSOC);
+
     return $data;
 }
 
@@ -64,5 +69,21 @@ function updateCourse($courseId){
     $requete->bindValue(':courseId', $courseId);
 
     $resultUpdate = $requete->execute();
+
     return $resultUpdate;
+}
+
+/**
+ * Fonction qui permet de supprimer un cours grace a son id
+ * @param $courseId
+ * @return $result;
+ */
+function deleteCourse($courseId){
+    //on initialise la connexion
+    $bddPDO = connexionBDD();
+    $requete = $bddPDO->prepare('DELETE FROM courses WHERE courseId = :courseId');
+    $requete->bindValue(':courseId', $courseId);
+    $result = $requete->execute();
+
+    return $result;
 }

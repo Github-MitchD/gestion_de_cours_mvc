@@ -3,7 +3,7 @@
 require_once 'header.php';
 
 //on affiche les messages d'erreurs
-if (isset($message)) echo $message;
+// if (isset($message)) echo $message;
 ?>
 
 <h2>Update du cours ayant l'id <?= $data['courseId']; ?></h2>
@@ -15,6 +15,8 @@ if (isset($message)) echo $message;
         <form action="controllerCourse/getUpdateCourse/<?= $data['courseId']; ?>" method="POST">
 
             <h2>Modification du cours</h2>
+
+            <?php if(isset($message)) echo $message; ?>
 
             <table>
                 <tr>

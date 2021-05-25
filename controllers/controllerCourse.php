@@ -79,3 +79,32 @@ function getUpdateCourse($courseId)
         require_once 'views/errors.php';
     }
 }
+
+/**
+ * Fonction qui permet d'appeler la fonction du model pour supprimer un cours grace son id
+ * 
+ */
+function getDeleteCourse($courseId){
+    //on affiche les valeurs du cours ayant l'id $courseId
+    $data = getCourse($courseId);
+    if(!$data){
+        $message = "Aucun cours a supprimer !";
+    }
+    //on les affiche dans sa view
+    else {
+        require_once 'views/viewDeleteCourse.php';
+    }
+    
+    //si le btn delete est executé
+    if(isset($_POST['delete'])){
+        $resultDelete = deleteCourse($courseId);
+        if(!$resultDelete){
+            $message = "Un problème dans la suppression du cours !";
+        }
+        //si la suppresion s'est bien passée
+        else {
+            $message = "Le cours a bien été supprimé !";
+        }
+    }
+    require_once 'views/errors.php';
+}

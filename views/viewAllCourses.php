@@ -31,7 +31,7 @@ if (isset($message)) echo $message;
                     echo "<td>$valeur[1]</td>";
                     echo "<td>$valeur[2]</td>";
                     echo "<td>$valeur[3]</td>";
-                    echo "<td><a href='controllerCourse/getUpdateCourse/$valeur[0]'>Modifier</a> | <a href='controllerCourse/getUpdateCourse/$valeur[0]'>Delete</a></td>";
+                    echo "<td><a href='controllerCourse/getUpdateCourse/$valeur[0]'>Modifier</a> | <a href='controllerCourse/getDeleteCourse/$valeur[0]'>Supprimer</a></td>";
                     echo "</tr>";
                 }
 
