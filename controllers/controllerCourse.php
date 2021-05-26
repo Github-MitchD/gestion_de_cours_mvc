@@ -17,7 +17,7 @@ function addOneCourse(){
         //
         else {
             //sinon
-            echo 'Tous les champs sont requis';
+            $message = "Tous les champs sont requis";
         }
     }
     //on a besoin de notre view

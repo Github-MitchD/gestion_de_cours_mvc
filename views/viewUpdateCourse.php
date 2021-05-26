@@ -16,7 +16,7 @@ require_once 'header.php';
 
             <h2>Modification du cours</h2>
 
-            <?php if(isset($message)) echo $message; ?>
+            <?php require_once 'views/errors.php'; ?>
 
             <table>
                 <tr>
