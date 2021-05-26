@@ -45,7 +45,17 @@
                             <li class="home menu-item"><a href=""><img src="assets/images/home-icon.png" alt="Home"></a></li>
                             <li class="menu-item"><a href="controllerCourse/getAllCourses">Tous les cours</a></li>
                             <li class="menu-item"><a href="controllerCourse/addOneCourse">New Cours</a></li>
-                            <li class="menu-item"><a href="#link">Our projects</a></li>
+                            <!-- <li class="menu-item"><a href="#link">Création compte</a></li> -->
+                            <li class="menu-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Students
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="controllerStudents/addOneStudent">Création compte</a></li>
+                                    <li><a class="dropdown-item" href="controllerStudents/connexion">Connection compte</a></li>
+                                    <li><a class="dropdown-item" href="#">Accès compte</a></li>
+                                </ul>
+                            </li>
                             <li class="menu-item"><a href="#link">Connection</a></li>
                             <!-- <li class="menu-item current-menu-item"><a href="contact.html">current</a></li> -->
                         </ul>
