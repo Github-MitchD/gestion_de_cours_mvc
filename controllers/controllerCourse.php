@@ -40,8 +40,30 @@ function getAllCourses(){
             //on redirige vers le formulaire d'ajout de cours
             addOneCourse();
         } else {
-            //page d'affichage de tous les cours
+            //page d'affichage de tous les cours(admin)
             require_once 'views/viewAllCourses.php';
+        }
+    }
+    //on ferme la connexion du serveur pour permettre a d'autres requete de s'executer
+    $resultGetCourses->closeCursor();
+}
+
+/**
+ * Fonction qui permet de récupérer tous les cours de la base de données
+ */
+function getAllCoursesStudent()
+{
+    $resultGetCourses = getCourses();
+
+    if (!$resultGetCourses) {
+        $message = "La récupération des cours a échoué !";
+    } else {
+        $nb_courses = $resultGetCourses->rowCount();
+        if ($nb_courses == 0) {
+            $message = "Il n'y a aucun cours pour le moment !";
+        } else {
+            //page d'affichage de tous les cours(students)
+            require_once 'views/viewAllCoursesStudents.php';
         }
     }
     //on ferme la connexion du serveur pour permettre a d'autres requete de s'executer

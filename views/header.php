@@ -53,7 +53,7 @@
                                 <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
                                     <li><a class="dropdown-item" href="controllerStudents/addOneStudent">Création compte</a></li>
                                     <li><a class="dropdown-item" href="controllerStudents/connexion">Connection compte</a></li>
-                                    <li><a class="dropdown-item" href="#">Accès compte</a></li>
+                                    <li><a class="dropdown-item" href="controllerCourse/getAllCoursesStudent">Tous les cours</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item"><a href="#link">Connection</a></li>

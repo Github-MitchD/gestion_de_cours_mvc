@@ -99,10 +99,12 @@ function connexion(){
                 $_SESSION['password'] = $password;
 
                 //on lui affiche les cours de la plateforme
-                $resulGetCourses = getCourses();
+                $resultGetCourses = getCourses();
+                //pour l'affichage du nbr de cours
+                $nb_courses = $resultGetCourses->rowCount();
                 //on appel la view reservé aux students (sans les btn admin "ajouter,modifier,supprimer")
-                //require_once 'views/viewAllCoursesStudents.php';
-                echo "Vous êtes bien connecté ". $_SESSION['firstName'];
+                require_once 'views/viewAllCoursesStudents.php';
+                // echo "Vous êtes bien connecté ". $_SESSION['firstName'];
 
             }
             //si le password n'est pas valide
