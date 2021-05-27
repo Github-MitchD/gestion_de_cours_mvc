@@ -7,7 +7,9 @@ if (isset($message)) echo $message;
 ?>
 
 <h2>Liste de tous les cours</h2>
-<h3>Salut <?= $_SESSION['firstName']; ?>, il y a <?= $nb_courses; ?> cours.</h3>
+<h3>Salut <?php if(isset($_SESSION['studentId'])){
+        echo $_SESSION['firstName'];
+        }?> , il y a <?= $nb_courses; ?> cours.</h3>
 
 <div class="container">
     <center>

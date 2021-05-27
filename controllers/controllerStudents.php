@@ -117,5 +117,20 @@ function connexion(){
     if(!isset($_SESSION['studentId'])){
         require_once 'views/viewConnexion.php';
     }
+}
 
+/**
+ * Fonction qui permet a l'etudiant de se deconnecter d la session
+ */
+function disconnect(){
+    session_start();
+    if(isset($_SESSION['studentId'])){
+        session_unset();
+        session_destroy();
+        $message = "Vous êtes bien déconnecté !";
+    }
+    else {
+        $message = "Vous n'êtes pas connecté";
+    }
+    require_once 'views/errors.php';
 }

@@ -54,6 +54,7 @@
                                     <li><a class="dropdown-item" href="controllerStudents/addOneStudent">Création compte</a></li>
                                     <li><a class="dropdown-item" href="controllerStudents/connexion">Connection compte</a></li>
                                     <li><a class="dropdown-item" href="controllerCourse/getAllCoursesStudent">Tous les cours</a></li>
+                                    <li><a class="dropdown-item" href="controllerStudents/disconnect">Se déconnecter</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item"><a href="#link">Connection</a></li>
