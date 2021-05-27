@@ -17,6 +17,7 @@ function addNewStudent($studentINE, $firstName, $lastName, $adress, $city, $mail
     } else {
         $message = "Compte bien crée !";
     }
+    require_once 'views/errors.php';
 }
 
 /**
@@ -60,7 +61,8 @@ function addOneStudent()
             $message = "Tous les champs sont requis !";
         }  
     }    
-    require_once 'views/viewAddStudent.php';    
+    require_once 'views/viewAddStudent.php';
+    require_once 'views/errors.php';
 }
 
 /**
@@ -117,6 +119,7 @@ function connexion(){
     if(!isset($_SESSION['studentId'])){
         require_once 'views/viewConnexion.php';
     }
+    require_once 'views/errors.php';
 }
 
 /**

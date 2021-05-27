@@ -7,11 +7,12 @@ if (isset($message)) echo $message;
 ?>
 
 <h2>Liste de tous les cours</h2>
-<h3>Salut <?php if(isset($_SESSION['studentId'])){
-        echo $_SESSION['firstName'];
-        }?> , il y a <?= $nb_courses; ?> cours.</h3>
+<h3>Salut <?php if (isset($_SESSION['studentId'])) {
+                echo $_SESSION['firstName'];
+            } ?> , il y a <?= $nb_courses; ?> cours.</h3>
 
 <div class="container">
+    <?php require_once 'views/errors.php'; ?>
     <center>
         <table class="table table-hover table-striped table-bordered">
             <thead>
@@ -33,13 +34,13 @@ if (isset($message)) echo $message;
                     echo "<td>$valeur[1]</td>";
                     echo "<td>$valeur[2]</td>";
                     echo "<td>$valeur[3]</td>";
-                    ?>
+                ?>
                     <td><a href="controllerInscription/addCourseToStudents/<?= $_SESSION['studentId']; ?>/<?= $valeur[0]; ?>">Inscription</a>
                     <?php
                     echo "</tr>";
                 }
 
-                ?>
+                    ?>
 
             </tbody>
         </table>

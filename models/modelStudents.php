@@ -1,3 +1,4 @@
+<!-- Model pour les students -->
 <?php
 
 //on inclu le fichier qui se connecte à la bdd

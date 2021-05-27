@@ -22,6 +22,7 @@ function addOneCourse(){
     }
     //on a besoin de notre view
     require_once 'views/viewCourse.php';
+    require_once 'views/errors.php';
 }
 
 /**
@@ -46,6 +47,7 @@ function getAllCourses(){
     }
     //on ferme la connexion du serveur pour permettre a d'autres requete de s'executer
     $resultGetCourses->closeCursor();
+    require_once 'views/errors.php';
 }
 
 /**
@@ -68,6 +70,7 @@ function getAllCoursesStudent()
     }
     //on ferme la connexion du serveur pour permettre a d'autres requete de s'executer
     $resultGetCourses->closeCursor();
+    require_once 'views/errors.php';
 }
 
 /**
@@ -121,7 +124,7 @@ function getDeleteCourse($courseId){
     if(isset($_POST['delete'])){
         $resultDelete = deleteCourse($courseId);
         if(!$resultDelete){
-            $message = "Un problème dans la suppression du cours !";
+            $message = "Un problème est survenu lors de la suppression du cours !";
         }
         //si la suppresion s'est bien passée
         else {
