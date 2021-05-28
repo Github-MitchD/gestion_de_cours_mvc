@@ -1,13 +1,12 @@
 <!-- view d'ajout d'un nouveau cours -->
 <?php
-if (!isset($_SESSION)) session_start();
 require_once 'header.php';
 
 //on affiche les messages d'erreurs
 if (isset($message)) echo $message;
 ?>
 
-<h2>Liste de tous les cours</h2>
+<h2>Liste des cours ou je suis inscris</h2>
 <h3>Salut <?php if (isset($_SESSION['studentId'])) {
                 echo $_SESSION['firstName'];
             } ?> , il y a <?= $nb_courses; ?> cours.</h3>
@@ -36,12 +35,12 @@ if (isset($message)) echo $message;
                     echo "<td>$valeur[2]</td>";
                     echo "<td>$valeur[3]</td>";
                 ?>
-                    <td><a href="controllerInscription/addCourseToStudents/<?= $_SESSION['studentId']; ?>/<?= $valeur[0]; ?>">Inscription</a></td>
-                <?php
+                    <td><a href="controllerInscription/toUnscribeStudent/<?= $_SESSION['studentId']; ?>/<?= $valeur[0]; ?>">Se désinscrire</a>
+                    <?php
                     echo "</tr>";
                 }
 
-                ?>
+                    ?>
 
             </tbody>
         </table>
